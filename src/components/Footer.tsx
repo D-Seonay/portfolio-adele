@@ -55,7 +55,7 @@ const Footer = () => {
             className="md:col-span-2"
           >
             <a href="#" className="text-2xl font-bold text-white mb-4 block">
-              Portfolio<span className="text-accent">.</span>
+            Adèle <span className="text-accent">FAUTRAT</span>
             </a>
             <p className="text-gray-400 mb-6">
               Expert en communication digitale et relations publiques. Transformez votre présence en ligne avec des stratégies innovantes.
@@ -115,7 +115,7 @@ const Footer = () => {
           className="mt-12 pt-8 border-t border-gray-800 text-center"
         >
           <p className="text-gray-400">
-            © {currentYear} Portfolio. Tous droits réservés.
+            © {currentYear} Adèle FAUTRAT. Tous droits réservés.
           </p>
         </motion.div>
       </div>
