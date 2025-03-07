@@ -3,50 +3,50 @@ import { useState } from 'react';
 
 const projects = [
   {
-    title: "Campagne Digitale Eco-responsable",
-    category: "Social Media",
-    image: "/images/project1.jpg", // Placeholder
-    description: "Stratégie social media pour une marque eco-responsable avec +150% d'engagement",
-    tags: ["Instagram", "Facebook", "LinkedIn"],
+    title: "Portfolio Personnel",
+    category: "Personal",
+    image: "/images/project1.jpg",
+    description: "Création d'un portfolio personnel avec React et Framer Motion",
+    tags: ["React", "TypeScript", "TailwindCSS"],
   },
   {
-    title: "Relations Presse Tech Startup",
-    category: "RP",
-    image: "/images/project2.jpg", // Placeholder
-    description: "20+ articles de presse et 5 interviews TV pour une startup innovante",
-    tags: ["Relations Presse", "Événementiel"],
+    title: "Stage Communication Digitale",
+    category: "Stage",
+    image: "/images/project2.jpg",
+    description: "Stage en communication digitale chez une startup tech",
+    tags: ["Social Media", "Content Creation"],
   },
   {
-    title: "Lancement Produit Innovant",
-    category: "Marketing",
-    image: "/images/project3.jpg", // Placeholder
-    description: "Stratégie de lancement multicanal avec 200K€ de ventes en 3 mois",
-    tags: ["Marketing", "Communication"],
+    title: "Projet de Gestion de Crise",
+    category: "Cours",
+    image: "/images/project3.jpg",
+    description: "Simulation de gestion de crise médiatique",
+    tags: ["Crisis Management", "RP"],
   },
   {
-    title: "Gestion de Crise Institutionnelle",
-    category: "Crisis Com",
-    image: "/images/project4.jpg", // Placeholder
-    description: "Gestion et résolution d'une crise médiatique majeure",
-    tags: ["Gestion de Crise", "RP"],
+    title: "Blog Personnel",
+    category: "Personal",
+    image: "/images/project4.jpg",
+    description: "Blog sur la communication et le marketing digital",
+    tags: ["Content", "Blogging"],
   },
   {
-    title: "Content Marketing B2B",
-    category: "Content",
-    image: "/images/project5.jpg", // Placeholder
-    description: "Stratégie de contenu générant +300% de leads qualifiés",
-    tags: ["Content", "B2B"],
+    title: "Stage RP",
+    category: "Stage",
+    image: "/images/project5.jpg",
+    description: "Stage en relations presse dans une agence",
+    tags: ["RP", "Media Relations"],
   },
   {
-    title: "Influence Marketing Campaign",
-    category: "Social Media",
-    image: "/images/project6.jpg", // Placeholder
-    description: "Collaboration avec 50+ influenceurs, 2M+ de reach",
-    tags: ["Influence", "Social Media"],
+    title: "Projet Marketing Digital",
+    category: "Cours",
+    image: "/images/project6.jpg",
+    description: "Projet de stratégie marketing digital",
+    tags: ["Digital Marketing", "Strategy"],
   },
 ];
 
-const categories = ["Tous", "Social Media", "RP", "Marketing", "Crisis Com", "Content"];
+const categories = ["Tous", "Personal", "Stage", "Cours"];
 
 const Portfolio = () => {
   const [activeCategory, setActiveCategory] = useState("Tous");
@@ -113,8 +113,9 @@ const Portfolio = () => {
               onHoverEnd={() => setHoveredIndex(null)}
             >
               <div className="relative h-[300px] rounded-xl overflow-hidden">
-                <div className="absolute inset-0 bg-gray-200 animate-pulse" />
+                <div className="absolute bg-gray-200" />
                 {/* Add actual image here */}
+                <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent p-6 flex flex-col justify-end"
                   initial={{ opacity: 0 }}

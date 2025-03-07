@@ -22,16 +22,6 @@ const Footer = () => {
       ],
     },
     {
-      title: 'Services',
-      links: [
-        { name: 'Communication Digitale', href: '#' },
-        { name: 'Relations Publiques', href: '#' },
-        { name: 'Marketing', href: '#' },
-        { name: 'Gestion de Crise', href: '#' },
-        { name: 'Content Marketing', href: '#' },
-      ],
-    },
-    {
       title: 'Social',
       links: [
         { name: 'LinkedIn', href: 'https://linkedin.com' },

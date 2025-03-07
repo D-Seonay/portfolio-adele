@@ -134,7 +134,7 @@ const AboutMe = () => {
             <div className="relative w-full h-[600px] rounded-2xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/20" />
               {/* Placeholder for about image */}
-              <div className="w-full h-full bg-gray-200 animate-pulse" />
+              <img src="/images/about-image.jpg" alt="About Adèle FAUTRAT" className="w-full h-full object-cover" />
             </div>
 
             {/* Floating elements */}
