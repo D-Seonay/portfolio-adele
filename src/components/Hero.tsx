@@ -1,9 +1,52 @@
 import { motion } from 'framer-motion';
+import { Sparkles, TrendingUp } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center bg-gradient-to-br from-white to-gray-50 pt-20">
-      <div className="container mx-auto px-4">
+    <section id="home" className="min-h-screen flex items-center relative overflow-hidden pt-20">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <motion.div
+          className="absolute -top-40 -right-40 w-80 h-80 bg-primary/60 rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.5, 0.3],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+        <motion.div
+          className="absolute -bottom-40 -left-40 w-80 h-80 bg-secondary/40 rounded-full blur-3xl"
+          animate={{
+            scale: [1.2, 1, 1.2],
+            opacity: [0.5, 0.3, 0.5],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2
+          }}
+        />
+        <motion.div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-accent/40 rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.1, 1],
+            opacity: [0.2, 0.4, 0.2],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 4
+          }}
+        />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -96,7 +139,7 @@ const Hero = () => {
             >
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center">
-                  <span className="text-accent">✨</span>
+                  <Sparkles className="w-4 h-4 text-accent" />
                 </div>
                 <div>
                   <p className="text-sm font-semibold">Expert certifié</p>
@@ -119,7 +162,7 @@ const Hero = () => {
             >
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
-                  <span className="text-primary">📈</span>
+                  <TrendingUp className="w-4 h-4 text-primary" />
                 </div>
                 <div>
                   <p className="text-sm font-semibold">+200%</p>
