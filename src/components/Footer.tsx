@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Twitter, Linkedin, Instagram, Facebook } from 'lucide-react';
+import { Twitter, Linkedin, Instagram, Heart } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,7 +8,6 @@ const Footer = () => {
     { name: 'twitter', icon: Twitter, href: 'https://twitter.com' },
     { name: 'linkedin', icon: Linkedin, href: 'https://linkedin.com' },
     { name: 'instagram', icon: Instagram, href: 'https://instagram.com' },
-    { name: 'facebook', icon: Facebook, href: 'https://facebook.com' },
   ];
 
   const footerLinks = [
@@ -38,7 +37,6 @@ const Footer = () => {
         { name: 'LinkedIn', href: 'https://linkedin.com' },
         { name: 'Twitter', href: 'https://twitter.com' },
         { name: 'Instagram', href: 'https://instagram.com' },
-        { name: 'Facebook', href: 'https://facebook.com' },
       ],
     },
   ];
@@ -114,8 +112,11 @@ const Footer = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-12 pt-8 border-t border-gray-800 text-center"
         >
-          <p className="text-gray-400">
+          <p className="text-gray-400 flex items-center justify-center gap-2">
             © {currentYear} Adèle FAUTRAT. Tous droits réservés.
+          </p>
+          <p className="text-gray-400 flex items-center justify-center gap-2">
+            Design et développé avec <Heart className="w-4 h-4 text-red-500 animate-pulse" /> par <a href="https://github.com/D-Seonay" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-accent transition-colors">Mathéo DELAUNAY</a>
           </p>
         </motion.div>
       </div>
